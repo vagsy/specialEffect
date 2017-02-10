@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.btn-primary{
+			display: inline-block;
+		    padding: 12px 50px;
+		    margin-bottom: 0;
+		    font-size: 14px;
+		    font-weight: 400;
+		    line-height: 1.42857143;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: middle;
+		    -ms-touch-action: manipulation;
+		    touch-action: manipulation;
+		    cursor: pointer;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		    background-image: none;
+		    border: 1px solid transparent;
+		    border-radius: 4px;
+		    text-decoration: none;
+		}
+		/* btn hover effect start */
+		.btn-anis-effect {
+		  position: relative;
+		  z-index: 1;
+		  overflow: hidden;
+		  background-color: transparent;
+		  transition: .2s;
+		  transition-delay: .1s
+		}
+
+		.btn-anis-effect:hover {
+		  transition-delay: .45s
+		}
+
+		.btn-anis-effect:before,
+		.btn-anis-effect:after {
+		  position: absolute;
+		  top: 50%;
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  background: #434345;
+		  border-radius: 50%;
+		  transition: 0.5s;
+		  z-index: -1
+		}
+
+		.btn-anis-effect:before {
+		  left: -20px;
+		  -webkit-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%)
+		}
+
+		.btn-anis-effect:after {
+		  right: -20px;
+		  -webkit-transform: translate(50%, -50%);
+		  transform: translate(50%, -50%)
+		}
+
+		.btn-anis-effect:hover:before {
+		  -webkit-animation: criss-cross-left 0.8s;
+		  animation: criss-cross-left 0.8s
+		}
+
+		.btn-anis-effect:hover:after {
+		  -webkit-animation: criss-cross-right 0.8s;
+		  animation: criss-cross-right 0.8s
+		}
+
+		.btn-anis-effect.btn-primary {
+		  color: #fff;
+		  background-color: #1ab394
+		}
+
+		.btn-anis-effect.btn-primary:before,
+		.btn-anis-effect.btn-primary:after {
+		  background: #79CCF2
+		}
+
+		.btn-anis-effect.btn-primary:hover {
+		  color: #fff;
+		  border-color: #79CCF2;
+		  background: #79CCF2
+		}
+
+
+		/** 2.32 Animations Addons */
+		@-webkit-keyframes criss-cross-left {
+		  0% {
+		    left: -20px; }
+		  50% {
+		    left: 50%;
+		    width: 20px;
+		    height: 20px; }
+		  100% {
+		    left: 50%;
+		    width: 375px;
+		    height: 375px; } }
+
+		@keyframes criss-cross-left {
+		  0% {
+		    left: -20px; }
+		  50% {
+		    left: 50%;
+		    width: 20px;
+		    height: 20px; }
+		  100% {
+		    left: 50%;
+		    width: 375px;
+		    height: 375px; } }
+
+		@-webkit-keyframes criss-cross-right {
+		  0% {
+		    right: -20px; }
+		  50% {
+		    right: 50%;
+		    width: 20px;
+		    height: 20px; }
+		  100% {
+		    right: 50%;
+		    width: 375px;
+		    height: 375px; } }
+
+		@keyframes criss-cross-right {
+		  0% {
+		    right: -20px; }
+		  50% {
+		    right: 50%;
+		    width: 20px;
+		    height: 20px; }
+		  100% {
+		    right: 50%;
+		    width: 375px;
+		    height: 375px; } }
+
+		@-webkit-keyframes anim-naira-1 {
+		  50% {
+		    -webkit-transform: translateY(-50%) rotate3d(0, 0, 1, -10deg);
+		    transform: translateY(-50%) rotate3d(0, 0, 1, -10deg);
+		    animation-timing-function: ease-out; }
+		  100% {
+		    -webkit-transform: translateY(0%) rotate3d(0, 0, 1, 0deg);
+		    transform: translateY(0%) rotate3d(0, 0, 1, 0deg); } }
+
+		@keyframes anim-naira-1 {
+		  50% {
+		    -webkit-transform: translateY(-50%) rotate3d(0, 0, 1, -10deg);
+		    transform: translateY(-50%) rotate3d(0, 0, 1, -10deg);
+		    animation-timing-function: ease-out; }
+		  100% {
+		    -webkit-transform: translateY(0%) rotate3d(0, 0, 1, 0deg);
+		    transform: translateY(0%) rotate3d(0, 0, 1, 0deg); } }
+
+		@-webkit-keyframes anim-naira-2 {
+		  50% {
+		    -webkit-transform: translateY(50%) rotate3d(0, 0, 1, 10deg);
+		    transform: translateY(50%) rotate3d(0, 0, 1, 10deg);
+		    animation-timing-function: ease-out; }
+		  100% {
+		    -webkit-transform: translateY(0%) rotate3d(0, 0, 1, 0deg);
+		    transform: translateY(0%) rotate3d(0, 0, 1, 0deg); } }
+
+		@keyframes anim-naira-2 {
+		  50% {
+		    -webkit-transform: translateY(50%) rotate3d(0, 0, 1, 10deg);
+		    transform: translateY(50%) rotate3d(0, 0, 1, 10deg);
+		    animation-timing-function: ease-out; }
+		  100% {
+		    -webkit-transform: translateY(0%) rotate3d(0, 0, 1, 0deg);
+		    transform: translateY(0%) rotate3d(0, 0, 1, 0deg); } }
+
+		@-webkit-keyframes fadeInUpSm {
+		  0% {
+		    opacity: 0;
+		    -webkit-transform: translate3d(0, 50%, 0);
+		    transform: translate3d(0, 50%, 0); }
+		  100% {
+		    opacity: 1;
+		    -webkit-transform: none;
+		    transform: none; } }
+
+		@keyframes fadeInUpSm {
+		  0% {
+		    opacity: 0;
+		    -webkit-transform: translate3d(0, 50%, 0);
+		    transform: translate3d(0, 50%, 0); }
+		  100% {
+		    opacity: 1;
+		    -webkit-transform: none;
+		    transform: none; } }
+
+		.fadeInUpSm {
+		  -webkit-animation-name: fadeInUpSm;
+		  animation-name: fadeInUpSm;
+		  animation-duration: .4s; }
+
+		/* btn hover effect end */
+	</style>
+</head>
+<body>
+	<a href="" class="btn-primary btn-anis-effect">按钮</a>	
+</body>
+</html>
